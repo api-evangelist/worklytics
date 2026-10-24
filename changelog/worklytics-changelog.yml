@@ -1,0 +1,35 @@
+generated: '2026-10-24'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.worklytics.co/knowledge-base/release-notes.md
+sources:
+- https://docs.worklytics.co/knowledge-base/release-notes.md
+- https://docs.worklytics.co/knowledge-base/release-notes/2025-12-workday-overlap-and-timezone-offset-metrics.md
+- https://docs.worklytics.co/knowledge-base/release-notes/2025-10-release-notes-advanced-permissions.md
+- https://docs.worklytics.co/knowledge-base/release-notes/2025-08-new-ai-connectors.md
+entries:
+- breaking: false
+  highlights:
+  - We’ve launched a new set of metrics that help quantify how collaboration across time zones impacts teams—giving distributed organizations
+    clearer visibility into coordination challenges and opportunities.
+  - Greater time zone separation and limited workday overlap indicate employees must coordinate across multiple time zones, slowing peer feedback
+    loops and increasing the overhead of scheduling meetings.
+  - This can **extend decision cycles**, since questions and approvals often sit idle for an entire day before the right people are online, and
+    it **raises the risk of context loss and miscommunication**.
+  version: 2025-12
+- breaking: false
+  highlights:
+  - We’ve released a major upgrade to Worklytics’ permissions framework, giving you far greater control over who sees which analytics across your
+    organization.
+  - This update introduces fully customizable roles that let administrators determine exactly which dashboards are visible to each user group.
+  - To support larger rollouts, this release also integrates Worklytics roles with SAML-based single sign-on providers such as Okta.
+  version: 2025-10
+- breaking: false
+  highlights:
+  - If you're responsible for measuring AI adoption at your company, you’ve got your work cut out for you.
+  - Over the last couple of months, we’ve launched a broad set of new connectors designed to solve exactly this challenge.
+  - 'Each of these connectors is built to do one thing: *Give you real, measurable insight into AI usage across your company.*'
+  version: 2025-08
+current_version: 2025-12
+note: Only entries with detailed content were included; other listed release notes lack content on the provided pages.
+docs: https://docs.worklytics.co/knowledge-base/release-notes.md

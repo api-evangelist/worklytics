@@ -1,25 +1,126 @@
 aid: worklytics
+
 name: Worklytics
-description: 'Worklytics is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by bowery-capital) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/626173f9597b2935e932c8a4/6a27398e960fffa92c1b3d2e_worklytics-open-graph-image-2.jpg
+
+description: Worklytics provides workplace analytics solutions for IT, HR, and leadership teams, helping organizations measure productivity, AI
+  adoption, meeting effectiveness, remote work dynamics, and employee wellbeing. Their platform aggregates data from existing tools to deliver
+  dashboards, benchmarks, and actionable insights, enabling data‑driven decisions across people, technology, and business outcomes.
+
 url: https://raw.githubusercontent.com/api-evangelist/worklytics/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-24'
+
 modified: '2026-10-24'
+
 tags:
 - Company
-apis: []
+- Analytics
+- Workplace
+- AI
+- Productivity
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- bowery-capital
+
 common:
+- type: Plans
+  url: plans/worklytics-plans-pricing.yml
+- type: Spectral
+  url: rules/worklytics-rules.yml
+- type: JSONLD
+  url: json-ld/worklytics-context.jsonld
+- type: Vocabulary
+  url: vocabulary/worklytics-vocabulary.yml
+- type: DataModel
+  url: data-model/worklytics-data-model.yml
+- type: ChangeLog
+  url: changelog/worklytics-changelog.yml
+- type: Compliance
+  url: https://www.worklytics.co/worklytics-security
+- type: Security
+  url: security/worklytics-vulnerability-disclosure.yml
+- type: Conformance
+  url: conformance/worklytics-conformance.yml
+- type: LLMsTxt
+  url: llms/worklytics-llms.txt
+- type: AgentCard
+  url: a2a/worklytics-a2a.yml
+- type: WellKnown
+  url: well-known/worklytics-well-known.yml
+- type: Hosts
+  url: hosts/worklytics-hosts.yml
+- type: Vendors
+  url: vendors/worklytics-vendors.yml
+- type: Login
+  url: https://app.worklytics.co/login
+- type: ChangeLog
+  url: https://docs.worklytics.co/knowledge-base/release-notes
+- type: GettingStarted
+  url: https://docs.worklytics.co/knowledge-base/data-dictionary/getting-started
+- type: GitHubOrganization
+  url: https://github.com/Worklytics
+- type: TrustCenter
+  url: security/worklytics-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/worklytics-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/worklytics-domain-security.yml
 - type: Website
   url: https://www.worklytics.co/
+- type: Blog
+  url: https://www.worklytics.co/blog
+- type: Documentation
+  url: https://www.worklytics.co/how-it-works
+- type: Pricing
+  url: https://www.worklytics.co/pricing
+- type: TermsOfService
+  url: https://www.worklytics.co/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.worklytics.co/privacy-policy
+
+apis:
+- aid: worklytics:worklytics-api
+  name: Worklytics API
+  description: 'Worklytics API as documented publicly: 39 operations. Contract generated from the documentation by API Evangelist (2026-10-24);
+    not the provider''s own document.'
+  humanURL: https://docs.devin.ai/desktop/accounts/api-reference/get-active-users
+  baseURL: https://intl.worklytics.co
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/worklytics-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/worklytics-get-knowledge-base-data-dictionary-ai-methodology-tool-comparison-atl-schema.json
+  - type: JSONSchema
+    url: json-schema/worklytics-post-tenant-api-data-connections-request-schema.json
+  - type: JSONSchema
+    url: json-schema/worklytics-put-tenant-api-data-connections-connectionid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/worklytics-post-tenant-data-connections-response-schema.json
+  - type: JSONSchema
+    url: json-schema/worklytics-put-tenant-data-connections-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/worklytics-get-tenant-data-connections-id-response-schema.json
+
+x-backed-by:
+- bowery-capital
+x-enrichment:
+  date: '2026-10-24'
+  status: enriched
+  artifacts_added: 29
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

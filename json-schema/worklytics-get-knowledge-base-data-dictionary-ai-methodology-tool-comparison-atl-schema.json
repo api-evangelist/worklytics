@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/worklytics/main/json-schema/worklytics-get-knowledge-base-data-dictionary-ai-methodology-tool-comparison-atl-schema.json",
+  "title": "GetKnowledgeBaseDataDictionaryAiMethodologyToolComparisonAtl",
+  "x-generated": "2026-10-24",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/worklytics-openapi-generated.yml#/components/schemas/GetKnowledgeBaseDataDictionaryAiMethodologyToolComparisonAtl",
+  "type": "object",
+  "properties": {
+    "answer": {
+      "type": "string",
+      "description": "Direct answer to the question."
+    },
+    "excerpts": {
+      "type": "array",
+      "description": "Relevant excerpts from the documentation."
+    },
+    "sources": {
+      "type": "array",
+      "description": "Sources indicating where the excerpts were taken."
+    }
+  }
+}

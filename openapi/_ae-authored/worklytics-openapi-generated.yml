@@ -1,0 +1,1136 @@
+openapi: 3.1.0
+info:
+  title: Worklytics API
+  version: '2026-10-24'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-24: 39 operation(s) read from 33 public documentation page(s) (each
+    operation names its page in x-source). This is not the provider''s published contract; Worklytics has published no machine-readable contract
+    that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 5
+    documentation: 34
+    pages-with-code: 2
+    pages-read: 33
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-24'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.devin.ai/desktop/accounts/api-reference/get-active-users
+  - https://docs.worklytics.co/knowledge-base/tenant-api.md
+  - https://docs.worklytics.co/knowledge-base/data-import/api.md
+  - https://docs.worklytics.co/knowledge-base/data-import/webhooks.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/aggregates-methodology.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/aggregates-methodology/focus-time-methodology.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/getting-started.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/defining-ai-usage.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/gong.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/getting-started/worklytics-datasets.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/glean.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/cursor.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/gemini.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/chatgpt.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/miro-ai.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/slack-ai.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/windsurf.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/getting-started/your-first-2-sql-queries.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/claude-code.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/worklytics-vs-self-reported.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/atlassian-rovo.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/github-copilot.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/claude-assistant.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/microsoft-copilot.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/getting-started/sample-sql-queries-event-level-data.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/getting-started/sample-sql-queries-event-level-data-1.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/getting-started/sample-sql-queries-event-level-data-2.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/getting-started/sample-sql-queries-event-level-data-3.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/getting-started/sample-sql-queries-event-level-data-4.md
+  - https://docs.worklytics.co/knowledge-base/data-dictionary/getting-started/sample-sql-queries-aggregate-level-data-and-collab.-graph.md
+  - https://docs.devin.ai/desktop/accounts/api-reference/api-introduction
+servers:
+- url: https://intl.worklytics.co
+paths:
+  /api/v2alpha/analytics/active-users:
+    get:
+      operationId: get_api_v2alpha_analytics_active_users
+      tags:
+      - Api
+      summary: GET /api/v2alpha/analytics/active-users
+      x-source: https://docs.devin.ai/desktop/accounts/api-reference/get-active-users
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV2AlphaAnalyticsActiveUsersResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl curl --request GET  --url https://server.codeium.com/api/v2alpha/analytics/active-users  --header ''Authorization: Bearer
+          <token>'' import requests
+
+          url = "https://server.codeium.com/api/v2alpha/analytics/active-users"
+
+          headers = {"Authorization": "Bearer <token>"}
+
+          response = requests.get(url, headers=headers)
+
+          print(response.text) const options = {method: ''GET'', headers: {Authorization: ''Bearer <'
+  /api/v2alpha/models:
+    get:
+      operationId: get_api_v2alpha_models
+      tags:
+      - Api
+      summary: List Models
+      x-source: https://docs.devin.ai/desktop/accounts/api-reference/api-introduction
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/aggregates-methodology.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_aggregates_methodology_md
+      tags:
+      - Knowledge Base
+      summary: Aggregates Methodology
+      description: Perform an HTTP GET request on the URL with the `ask` and `goal` query parameters to retrieve a direct answer and relevant
+        excerpts from the documentation.
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/aggregates-methodology.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question, specific and self‑contained, written in natural language.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user’s ultimate goal, describing the outcome they want to achieve.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/aggregates-methodology/focus-time-methodology.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_aggregates_methodology_focus_time_methodology
+      tags:
+      - Knowledge Base
+      summary: Focus Time Methodology
+      description: Perform an HTTP GET request on the URL with the `ask` and `goal` query parameters to retrieve a direct answer and relevant
+        excerpts from the documentation.
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/aggregates-methodology/focus-time-methodology.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question, specific and self‑contained.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user’s overall goal, describing the desired outcome.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/ai-methodology.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_ai_methodology_md
+      tags:
+      - Knowledge Base
+      summary: AI Methodology
+      description: Perform an HTTP GET request on the URL with the `ask` and `goal` query parameters to retrieve a direct answer and relevant
+        excerpts from the documentation.
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question; specific, self‑contained, natural language.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user’s ultimate goal, describing the desired outcome.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/ai-methodology/defining-ai-usage.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_ai_methodology_defining_ai_usage_md
+      tags:
+      - Knowledge Base
+      summary: Defining AI Usage
+      description: Perform an HTTP GET request on the URL with the `ask` and `goal` query parameters to retrieve a direct answer and relevant
+        excerpts from the documentation.
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/defining-ai-usage.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question, specific and self‑contained, written in natural language.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user’s ultimate goal, describing the outcome they want to achieve.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/ai-methodology/tool-comparison.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_ai_methodology_tool_comparison_md
+      tags:
+      - Knowledge Base
+      summary: Tools
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question, specific and self‑contained, written in natural language.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user’s ultimate goal, describing the outcome they want to achieve.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/ai-methodology/tool-comparison/atlassian-rovo.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_ai_methodology_tool_comparison_atlassian_rovo
+      tags:
+      - Knowledge Base
+      summary: Querying This Documentation
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/atlassian-rovo.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question; specific, self‑contained, natural language.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user’s overall goal; describes the outcome they want to achieve.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetKnowledgeBaseDataDictionaryAiMethodologyToolComparisonAtl'
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/ai-methodology/tool-comparison/chatgpt.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_ai_methodology_tool_comparison_chatgpt_md
+      tags:
+      - Knowledge Base
+      summary: ChatGPT Enterprise
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/chatgpt.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question; should be specific, self-contained, and written in natural language.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user's ultimate goal; describes the outcome the user wants rather than restating the question.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/ai-methodology/tool-comparison/claude-assistant.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_ai_methodology_tool_comparison_claude_assista
+      tags:
+      - Knowledge Base
+      summary: Perform an HTTP GET request on the following URL with the `ask` and `goal` query parameters
+      description: Retrieves the markdown content of the Claude assistant documentation page, optionally enriched with an answer to the provided
+        `ask` question and contextual information based on the `goal`.
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/claude-assistant.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question; specific, self‑contained, natural language query about the documentation page.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The broader user goal; describes the outcome the user wants to achieve.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/ai-methodology/tool-comparison/claude-code.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_ai_methodology_tool_comparison_claude_code_md
+      tags:
+      - Knowledge Base
+      summary: Claude Code
+      description: Perform an HTTP GET request on the URL with the `ask` and `goal` query parameters to retrieve a direct answer and relevant
+        excerpts from the documentation.
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/claude-code.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'The immediate question: it should be specific, self-contained, and written in natural language.'
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user’s ultimate goal, describing the outcome they want to achieve.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/ai-methodology/tool-comparison/cursor.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_ai_methodology_tool_comparison_cursor_md
+      tags:
+      - Knowledge Base
+      summary: Cursor
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/cursor.md
+      parameters:
+      - name: ask
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The immediate question, specific and self‑contained, written in natural language.
+      - name: goal
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The user’s ultimate goal, describing the outcome they want to achieve.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/ai-methodology/tool-comparison/gemini.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_ai_methodology_tool_comparison_gemini_md
+      tags:
+      - Knowledge Base
+      summary: Gemini in Workspace
+      description: Performs an HTTP GET request on the Gemini documentation page with optional `ask` and `goal` query parameters to retrieve a
+        direct answer and relevant excerpts from the documentation.
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/gemini.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question, specific and self‑contained, written in natural language.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user’s overall goal, describing the outcome they want to achieve.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/ai-methodology/tool-comparison/github-copilot.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_ai_methodology_tool_comparison_github_copilot
+      tags:
+      - Knowledge Base
+      summary: GitHub Copilot
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/github-copilot.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/ai-methodology/tool-comparison/glean.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_ai_methodology_tool_comparison_glean_md
+      tags:
+      - Knowledge Base
+      summary: Glean
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/glean.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question, specific and self‑contained, written in natural language.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user’s ultimate goal, describing the outcome they want to achieve.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/ai-methodology/tool-comparison/gong.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_ai_methodology_tool_comparison_gong_md
+      tags:
+      - Knowledge Base
+      summary: Gong
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/gong.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/ai-methodology/tool-comparison/microsoft-copilot.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_ai_methodology_tool_comparison_microsoft_copi
+      tags:
+      - Knowledge Base
+      summary: Microsoft Copilot
+      description: Perform an HTTP GET request on the URL with the `ask` and `goal` query parameters to retrieve a direct answer and relevant
+        excerpts from the documentation.
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/microsoft-copilot.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question, specific and self‑contained, written in natural language.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user’s ultimate goal, describing the outcome they want to achieve.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/ai-methodology/tool-comparison/miro-ai.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_ai_methodology_tool_comparison_miro_ai_md
+      tags:
+      - Knowledge Base
+      summary: Miro AI
+      description: Retrieves the Markdown documentation page for Miro AI, optionally answering a specific question.
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/miro-ai.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question, specific and self‑contained, written in natural language.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user’s ultimate goal, describing the outcome they want to achieve.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/ai-methodology/tool-comparison/slack-ai.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_ai_methodology_tool_comparison_slack_ai_md
+      tags:
+      - Knowledge Base
+      summary: Slack AI
+      description: Perform an HTTP GET request on the URL with the `ask` and `goal` query parameters to retrieve a direct answer and relevant
+        excerpts from the documentation.
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/slack-ai.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question, specific and self‑contained, written in natural language.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user’s ultimate goal, describing the outcome they want to achieve.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/ai-methodology/tool-comparison/windsurf.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_ai_methodology_tool_comparison_windsurf_md
+      tags:
+      - Knowledge Base
+      summary: Windsurf is an AI coding tool with autonomous agents, which makes it a code tool in Worklytics terms, and its data is sourced from
+        Windsurf's Analytics API.
+      description: Performs an HTTP GET request on the documentation page with optional `ask` and `goal` query parameters to retrieve a direct
+        answer and relevant excerpts.
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/tool-comparison/windsurf.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question; should be specific, self‑contained, and written in natural language.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The ultimate user goal; describes the outcome the user wants rather than restating the question.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/ai-methodology/worklytics-vs-self-reported.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_ai_methodology_worklytics_vs_self_reported_md
+      tags:
+      - Knowledge Base
+      summary: Worklytics vs. Tool-Reported Data
+      description: Perform an HTTP GET request on the URL with the `ask` and `goal` query parameters to retrieve a direct answer and relevant
+        excerpts from the documentation.
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/ai-methodology/worklytics-vs-self-reported.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question, specific and self‑contained, written in natural language.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user’s ultimate goal, describing the outcome they want to achieve.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/getting-started.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_getting_started_md
+      tags:
+      - Knowledge Base
+      summary: Getting Started
+      description: Perform an HTTP GET request on the URL with the `ask` and `goal` query parameters to retrieve a direct answer and relevant
+        excerpts from the documentation.
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/getting-started.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'The immediate question: it should be specific, self-contained, and written in natural language.'
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user’s ultimate goal, describing the outcome they want rather than restating the question.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/getting-started/sample-sql-queries-aggregate-level-data-and-collab.-graph.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_getting_started_sample_sql_queries_aggregate_
+      tags:
+      - Knowledge Base
+      summary: 'Sample SQL Queries: Aggregate-Level Data & Collab. Graph'
+      description: Retrieves the Markdown version of the sample SQL queries page.
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/getting-started/sample-sql-queries-aggregate-level-data-and-collab.-graph.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/getting-started/sample-sql-queries-event-level-data-1.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_getting_started_sample_sql_queries_event_leve
+      tags:
+      - Knowledge Base
+      summary: 'Sample SQL Queries: Manager Effectiveness'
+      description: Perform an HTTP GET request on the URL with the `ask` and `goal` query parameters to retrieve a direct answer and relevant
+        excerpts from the documentation.
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/getting-started/sample-sql-queries-event-level-data-1.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question to ask the documentation, specific and self‑contained.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The broader user goal behind the question, describing the desired outcome.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/getting-started/sample-sql-queries-event-level-data-2.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_getting_started_sample_sql_queries_event_leve
+      tags:
+      - Knowledge Base
+      summary: Perform an HTTP GET request on the following URL with the `ask` and `goal` query parameters
+      description: Returns the documentation page content with an answer to the provided question.
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/getting-started/sample-sql-queries-event-level-data-2.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question; specific, self‑contained, natural language query to the documentation page.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The broader purpose behind the question, describing the outcome the user wants.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/getting-started/sample-sql-queries-event-level-data-3.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_getting_started_sample_sql_queries_event_leve
+      tags:
+      - Knowledge Base
+      summary: 'Sample SQL Queries: Remote & Hybrid Work'
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/getting-started/sample-sql-queries-event-level-data-3.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question to ask the documentation.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The broader goal behind the question.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/getting-started/sample-sql-queries-event-level-data-4.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_getting_started_sample_sql_queries_event_leve
+      tags:
+      - Knowledge Base
+      summary: 'Sample SQL Queries: Sales Effectiveness'
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/getting-started/sample-sql-queries-event-level-data-4.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question, specific and self‑contained, written in natural language.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user’s ultimate goal, describing the outcome they want to achieve.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/getting-started/worklytics-datasets.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_getting_started_worklytics_datasets_md
+      tags:
+      - Knowledge Base
+      summary: Perform an HTTP GET request on the following URL with the `ask` and `goal` query parameters
+      description: The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/getting-started/worklytics-datasets.md
+      parameters:
+      - name: ask
+        in: query
+        required: true
+        schema:
+          type: string
+        description: 'The immediate question: it should be specific, self-contained, and written in natural language.'
+      - name: goal
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The user’s ultimate goal, describing the outcome they want rather than restating the question.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-dictionary/getting-started/your-first-2-sql-queries.md:
+    get:
+      operationId: get_knowledge_base_data_dictionary_getting_started_your_first_2_sql_queries_md
+      tags:
+      - Knowledge Base
+      summary: Your First 2 SQL Queries
+      x-source: https://docs.worklytics.co/knowledge-base/data-dictionary/getting-started/your-first-2-sql-queries.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question, specific and self‑contained.
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user’s overall goal, describing the desired outcome.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-import/api.md:
+    get:
+      operationId: get_knowledge_base_data_import_api_md
+      tags:
+      - Knowledge Base
+      summary: API
+      x-source: https://docs.worklytics.co/knowledge-base/data-import/api.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'The immediate question: it should be specific, self-contained, and written in natural language.'
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user's ultimate goal, describing the outcome they want.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /knowledge-base/data-import/webhooks.md:
+    get:
+      operationId: get_knowledge_base_data_import_webhooks_md
+      tags:
+      - Knowledge Base
+      summary: Perform an HTTP GET request on the following URL with the `ask` and `goal` query parameters
+      description: The endpoint returns a direct answer to the question along with relevant excerpts and sources from the documentation.
+      x-source: https://docs.worklytics.co/knowledge-base/data-import/webhooks.md
+      parameters:
+      - name: ask
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The immediate question, specific and self‑contained
+      - name: goal
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The user’s overall goal, describing the desired outcome
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /tenant-api/data-connections:
+    post:
+      operationId: post_tenant_api_data_connections
+      tags:
+      - Tenant Api
+      summary: POST /tenant-api/data-connections
+      x-source: https://docs.worklytics.co/knowledge-base/tenant-api.md
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTenantApiDataConnectionsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST https://intl.worklytics.co/tenant-api/data-connections  -H \"Authorization: Bearer <your ID Token>\"  -H \"x-worklytics-tenant-id:\
+          \ <your unique tenant ID>\" -H \"Content-Type: application/json\"  -d '{\n        \"integrationId\": \"<integration-id>\",\n       \
+          \ \"settings\": {\n          \"PROXY_DEPLOYMENT_KIND\": \"AWS\",\n          \"PROXY_ENDPOINT\": \"https://acme.execute-api.us-east-1.amazonaws.com/live"
+  /tenant-api/data-connections/{connectionid}:
+    delete:
+      operationId: delete_tenant_api_data_connections_connectionid
+      tags:
+      - Tenant Api
+      summary: DELETE /tenant-api/data-connections/{connectionId}
+      x-source: https://docs.worklytics.co/knowledge-base/tenant-api.md
+      parameters:
+      - name: connectionid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X DELETE https://intl.worklytics.co/tenant-api/data-connections/<connection-id>  -H "Authorization: Bearer <your ID Token>"  -H
+          "x-worklytics-tenant-id: <your unique tenant ID>"
+
+          ```'
+    get:
+      operationId: get_tenant_api_data_connections_connectionid
+      tags:
+      - Tenant Api
+      summary: GET /tenant-api/data-connections/{connectionId}
+      x-source: https://docs.worklytics.co/knowledge-base/tenant-api.md
+      parameters:
+      - name: connectionid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X GET https://intl.worklytics.co/tenant-api/data-connections/<connection-id>  -H "Authorization: Bearer <your ID Token>"  -H
+          "x-worklytics-tenant-id: <your unique tenant ID>"
+
+          ```'
+    put:
+      operationId: put_tenant_api_data_connections_connectionid
+      tags:
+      - Tenant Api
+      summary: PUT /tenant-api/data-connections/{connectionId}
+      x-source: https://docs.worklytics.co/knowledge-base/tenant-api.md
+      parameters:
+      - name: connectionid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutTenantApiDataConnectionsConnectionidRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X PUT https://intl.worklytics.co/tenant-api/data-connections/<connection-id>  -H \"Authorization: Bearer <your ID Token>\"\
+          \  -H \"x-worklytics-tenant-id: <your unique tenant ID>\" -H \"Content-Type: application/json\"  -d '{\n        \"integrationId\": \"\
+          <integration-id>\",\n        \"settings\": {\n          \"PROXY_DEPLOYMENT_KIND\": \"AWS\",\n          \"PROXY_ENDPOINT\": \"https://acme.execute-api.us-east-1.ama"
+  /tenant/data-connections:
+    post:
+      operationId: post_tenant_data_connections
+      tags:
+      - Tenant
+      summary: Tenant API
+      x-source: https://docs.worklytics.co/knowledge-base/tenant-api.md
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTenantDataConnectionsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTenantDataConnectionsResponse'
+      x-evidence:
+        kind: documentation
+  /tenant/data-connections/{id}:
+    delete:
+      operationId: delete_tenant_data_connections_id
+      tags:
+      - Tenant
+      summary: Tenant API
+      x-source: https://docs.worklytics.co/knowledge-base/tenant-api.md
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    get:
+      operationId: get_tenant_data_connections_id
+      tags:
+      - Tenant
+      summary: Tenant API
+      x-source: https://docs.worklytics.co/knowledge-base/tenant-api.md
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetTenantDataConnectionsIdResponse'
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_tenant_data_connections_id
+      tags:
+      - Tenant
+      summary: Tenant API
+      x-source: https://docs.worklytics.co/knowledge-base/tenant-api.md
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutTenantDataConnectionsIdRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutTenantDataConnectionsIdResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    GetApiV2AlphaAnalyticsActiveUsersResponse:
+      type: object
+      properties:
+        method:
+          type: string
+        headers:
+          type: object
+          properties:
+            Authorization:
+              type: string
+    GetKnowledgeBaseDataDictionaryAiMethodologyToolComparisonAtl:
+      type: object
+      properties:
+        answer:
+          type: string
+          description: Direct answer to the question.
+        excerpts:
+          type: array
+          description: Relevant excerpts from the documentation.
+        sources:
+          type: array
+          description: Sources indicating where the excerpts were taken.
+    PostTenantApiDataConnectionsRequest:
+      type: object
+      properties:
+        integrationId:
+          type: string
+        settings:
+          type: object
+          properties:
+            PROXY_DEPLOYMENT_KIND:
+              type: string
+            PROXY_ENDPOINT:
+              type: string
+            PROXY_AWS_REGION:
+              type: string
+            PROXY_AWS_ROLE_ARN:
+              type: string
+    PutTenantApiDataConnectionsConnectionidRequest:
+      type: object
+      properties:
+        integrationId:
+          type: string
+        settings:
+          type: object
+          properties:
+            PROXY_DEPLOYMENT_KIND:
+              type: string
+            PROXY_ENDPOINT:
+              type: string
+            PROXY_AWS_REGION:
+              type: string
+            PROXY_AWS_ROLE_ARN:
+              type: string
+    PostTenantDataConnectionsRequest:
+      type: object
+      properties:
+        integrationId:
+          type: string
+          description: Integration identifier
+        settings:
+          type: object
+          description: Configuration settings for the proxy
+      required:
+      - integrationId
+      - settings
+    PostTenantDataConnectionsResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Created data connection identifier
+        integrationId:
+          type: string
+          description: Integration identifier
+        settings:
+          type: object
+          description: Configuration settings for the proxy
+    GetTenantDataConnectionsIdResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Data connection identifier
+        integrationId:
+          type: string
+          description: Integration identifier
+        settings:
+          type: object
+          description: Configuration settings for the proxy
+    PutTenantDataConnectionsIdRequest:
+      type: object
+      properties:
+        integrationId:
+          type: string
+          description: Integration identifier
+        settings:
+          type: object
+          description: Configuration settings for the proxy
+      required:
+      - integrationId
+      - settings
+    PutTenantDataConnectionsIdResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Updated data connection identifier
+        integrationId:
+          type: string
+          description: Integration identifier
+        settings:
+          type: object
+          description: Configuration settings for the proxy
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+security:
+- bearer: []
+tags:
+- name: Api
+- name: Knowledge Base
+- name: Tenant
+- name: Tenant Api

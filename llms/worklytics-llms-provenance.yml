@@ -1,0 +1,6 @@
+generated: '2026-10-24'
+method: probed
+generator: harvest-llms.py
+source: https://docs.worklytics.co/knowledge-base/llms.txt
+bytes: 23293
+note: saved verbatim; the provider's own document

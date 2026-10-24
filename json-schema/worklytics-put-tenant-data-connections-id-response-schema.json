@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/worklytics/main/json-schema/worklytics-put-tenant-data-connections-id-response-schema.json",
+  "title": "PutTenantDataConnectionsIdResponse",
+  "x-generated": "2026-10-24",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/worklytics-openapi-generated.yml#/components/schemas/PutTenantDataConnectionsIdResponse",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Updated data connection identifier"
+    },
+    "integrationId": {
+      "type": "string",
+      "description": "Integration identifier"
+    },
+    "settings": {
+      "type": "object",
+      "description": "Configuration settings for the proxy"
+    }
+  }
+}

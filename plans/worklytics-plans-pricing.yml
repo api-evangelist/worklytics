@@ -1,0 +1,67 @@
+generated: '2026-10-24'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.worklytics.co/pricing
+sources:
+- https://www.worklytics.co/pricing
+name: Worklytics pricing
+audience: business-product
+pricing_basis: per-seat
+plans:
+- name: Free
+  price_text: $0
+  price: 0
+  description: Free forever for up to 100 users, calendar data only, 30 days history, dashboard access, basic meeting insights
+  features:
+  - Up to 100 users
+  - Calendar data only
+  - 30 days of data history
+  - Dashboard access
+  - Basic meeting insights
+  limits:
+  - name: users
+    limit_text: up to 100 users
+- name: Business
+  price_text: $2,500 /month
+  price: 2500
+  description: Starts at $2,500/month for up to 200 users, includes up to 5 integrations, org‑wide visibility, AI adoption insights, 3 months
+    data history, benchmarks, meeting effectiveness tracking
+  features:
+  - Includes up to 200 users
+  - Additional users at $10 per user / month
+  - Up to 5 integrations
+  - Org‑wide visibility & reporting
+  - AI adoption insights
+  - Data history up to 3 months
+  - Basic benchmarks
+  - 200+ pre‑built collaboration metrics
+  - Meeting effectiveness tracking
+  - Manager effectiveness insights
+  limits:
+  - name: users
+    limit_text: up to 200 users
+  - name: integrations
+    limit_text: up to 5 integrations
+- name: Enterprise
+  price_text: Custom pricing
+  description: Custom pricing for deeper data access, advanced analytics, and enterprise controls. Includes data pipeline/API access, row‑level
+    datasets, predictive analytics, SSO, role‑based access, on‑prem privacy filter, dedicated support, data science, strategic reviews, priority
+    support.
+  features:
+  - Data pipeline access (API / warehouse)
+  - Individual row‑level datasets
+  - Predictive analytics & advanced benchmarking
+  - SSO (SAML & Okta)
+  - Role‑based access & permissions
+  - On‑prem privacy filter (Worklytics Proxy)
+  - Dedicated support
+  - Data science & custom analysis
+  - Strategic reviews & success planning
+  - Priority support
+  limits:
+  - name: users
+    limit_text: Custom
+  - name: integrations
+    limit_text: Unlimited
+note: Enterprise pricing is negotiated; no listed price is provided.
+docs: https://www.worklytics.co/pricing
